@@ -56,6 +56,11 @@ class PopulatePage extends Component {
             }
           </div>
         </div>
+        <div className="row justify-content-center populate-button-content">
+          <button className="row justify-content-center populate-button">
+            Test button
+          </button>
+        </div>
         <NavFooter
           left={{
             label: "Cancel",
