@@ -43,6 +43,9 @@ const ArchivePage = ({
         onClick: quitApp,
         disabled: progress < 0 || progress === 100
       }}
+      center = {{
+                label: "Test"
+               }}
       right= {forwardButton(progress, quitApp)}
     />
   </div>
