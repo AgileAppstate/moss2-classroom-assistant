@@ -28,6 +28,18 @@ const forwardButton = (progress, quitApp) => {
   }
 }
 
+const mossButton = (progress, quitApp) => {
+  if (progress < 0 || progress === 100) {
+    return (
+      {
+        label: "Moss",
+        route: "/populate",
+        onClick: quitApp
+      }
+    )
+  }
+}
+
 const ArchivePage = ({
   quitApp,
   progress
@@ -43,7 +55,7 @@ const ArchivePage = ({
         onClick: quitApp,
         disabled: progress < 0 || progress === 100
       }}
-      center = {{ label: "Test" }}
+      center = {mossButton(progress, quitApp)}
       right= {forwardButton(progress, quitApp)}
     />
   </div>
