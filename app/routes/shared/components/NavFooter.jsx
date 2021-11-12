@@ -20,6 +20,7 @@ const linkElement = (id, obj, className) => {
 
 const NavFooter = ({
   left,
+  center,
   right
 }) => {
   const children = []
@@ -45,6 +46,11 @@ const NavFooter = ({
 
 NavFooter.propTypes = {
   left: PropTypes.shape({
+    label: PropTypes.string.isRequired,
+    route: PropTypes.string.isRequired,
+    onClick: PropTypes.func
+  }),
+  center: PropTypes.shape({
     label: PropTypes.string.isRequired,
     route: PropTypes.string.isRequired,
     onClick: PropTypes.func
