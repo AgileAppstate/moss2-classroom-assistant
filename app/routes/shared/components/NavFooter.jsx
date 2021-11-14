@@ -31,17 +31,19 @@ const NavFooter = ({
     )
   }
 
+  if (center !== undefined) {
+    children.push(
+      linkElement(1, center, "btn btn-success")
+    )
+  }
+  
   if (right !== undefined) {
     children.push(
       linkElement(1, right, "btn btn-success pull-right")
     )
   }
 
-  if (center !== undefined) {
-    children.push(
-      linkElement(1, center, "btn btn-success pull-center")
-    )
-  }
+  
 
   return (
     <Footer>
