@@ -37,6 +37,12 @@ const NavFooter = ({
     )
   }
 
+  if (center !== undefined) {
+    children.push(
+      linkElement(1, center, "btn btn-success pull-center")
+    )
+  }
+
   return (
     <Footer>
       {children}
