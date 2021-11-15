@@ -1,4 +1,6 @@
 # GitHub Classroom Assistant
+# NEW INTERFACE BRANCH
+This branch adds a separate interface for all things related to running moss.
 
 [![Build Status](https://travis-ci.org/education/classroom-assistant.svg?branch=master)](https://travis-ci.org/education/classroom-assistant)
 
