@@ -46,7 +46,7 @@ def specific():
     for dir in os.listdir(tmp_path):
         path = os.path.join(tmp_path, dir)
         for subdir in os.listdir(path):
-            m.addFilesByWildcard(f'{path}/{subdir}/{sys.args[2]}.py')
+            m.addFilesByWildcard(f'{path}/{subdir}/{sys.argv[2]}.py')
 
     # progress function optional, run on every file uploaded
     # result is submission URL
@@ -72,7 +72,7 @@ def specific():
 
 
 
-if sys.args[1] == 'all':
+if sys.argv[1] == 'all':
     all()
 else:
     specific()
