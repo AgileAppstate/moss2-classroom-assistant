@@ -28,13 +28,12 @@ const forwardButton = (progress, quitApp) => {
   }
 }
 
-const mossButton = (progress, quitApp) => {
+const mossButton = (progress, moss) => {
   if (progress < 0 || progress === 100) {
     return (
       {
         label: "Moss",
-        route: "/populate",
-        onClick: quitApp
+        onClick: moss
       }
     )
   }
@@ -42,7 +41,8 @@ const mossButton = (progress, quitApp) => {
 
 const ArchivePage = ({
   quitApp,
-  progress
+  progress, 
+  moss
 }) => (
   <div>
     <AssignmentPanel/>
@@ -55,7 +55,7 @@ const ArchivePage = ({
         onClick: quitApp,
         disabled: progress < 0 || progress === 100
       }}
-      center = {mossButton(progress, quitApp)}
+      center = {mossButton(progress, moss)}
       right= {forwardButton(progress, quitApp)}
     />
   </div>
@@ -68,8 +68,19 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   quitApp: () => {
     dispatch(settingsResetState())
+  },
+  moss: () => {
+    dispatch(moss_time())
   }
 })
+
+function moss_time() {
+  spawn = require("child_process").spawn;
+  pythonProcess = spawn('python',["moss.py-master/moss_usage.py"]); //No arg1
+  pythonProcess.on('close', (code) => {
+    console.log(`child process exited with code ${code}`);
+  });
+}
 
 ArchivePage.propTypes = {
   quitApp: PropTypes.func.isRequired,
