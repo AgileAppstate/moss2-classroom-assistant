@@ -70,13 +70,14 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch(settingsResetState())
   },
   moss: () => {
-    dispatch(moss_time())
+    moss_time()
   }
 })
 
+const { spawn } = require('child_process')
+
 function moss_time() {
-  spawn = require("child_process").spawn;
-  pythonProcess = spawn('python',["moss.py-master/moss_usage.py"]); //No arg1
+  pythonProcess = spawn('python',["moss.py-master/moss_usage.py", "all", ""]); //No arg1
   pythonProcess.on('close', (code) => {
     console.log(`child process exited with code ${code}`);
   });
