@@ -58,7 +58,7 @@ class PopulatePage extends Component {
         </div>
         <div className="row justify-content-center populate-button-content">
           <button className="row justify-content-center populate-button">
-            Test button
+            MOSS PAGE
           </button>
         </div>
         <NavFooter
