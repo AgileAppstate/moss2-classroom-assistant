@@ -33,7 +33,7 @@ const mossButton = (progress, quitApp) => {
     return (
       {
         label: "Moss",
-        route: "/populate",
+        route: "/moss",
         onClick: quitApp
       }
     )
