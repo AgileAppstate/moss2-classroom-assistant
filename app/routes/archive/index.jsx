@@ -84,9 +84,9 @@ function moss_time() {
   // pythonProcess.on('close', (code) => {
   //   console.log(`child process exited with code ${code}`);
   // });
-  console.log("before ExecSync")
+  console.log("before Exec")
   const pythonProc = execSync('python moss.py-master/moss_usage.py all *')
-  console.log("After ExecSync")
+  console.log("After Exec")
 }
 
 ArchivePage.propTypes = {
